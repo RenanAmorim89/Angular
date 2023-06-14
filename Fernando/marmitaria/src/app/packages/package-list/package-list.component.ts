@@ -1,10 +1,18 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-package-list',
   templateUrl: './package-list.component.html',
   styleUrls: ['./package-list.component.css']
 })
-export class PackageListComponent {
+export class PackageListComponent implements OnInit {
+
+  packages = [];
+
+  constructor(){}
+
+  ngOnInit(): void {
+    
+  }
 
 }
