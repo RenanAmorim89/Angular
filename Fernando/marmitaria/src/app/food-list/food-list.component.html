@@ -3,7 +3,11 @@
     <app-food-edit></app-food-edit>
     <hr>
     <ul class="list-group">
-      <a class="list-group-item" style="cursor: pointer;"></a>
+      <a *ngFor="let food of foodList"
+        class="list-group-item" 
+        style="cursor: pointer;">
+        {{ food.name}} ({{ food.amaunt}})
+      </a>
 
     </ul>
   </div>
