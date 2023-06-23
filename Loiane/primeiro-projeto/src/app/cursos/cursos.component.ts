@@ -1,10 +1,25 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-cursos',
   templateUrl: './cursos.component.html',
   styleUrls: ['./cursos.component.css']
 })
-export class CursosComponent {
+export class CursosComponent implements OnInit{
+
+  nomePortal: string
+  
+// Neste caso esatamos inicializando a variavel aqui
+  cursos: string[] = ['Java', 'Ext JS', 'Angular']
+  
+// Podemos iniciar a variavel no construtor
+  constructor() {
+    this.nomePortal = 'http://loiane.training'
+   }
+
+  ngOnInit() 
+  {
+  }
+
 
 }
