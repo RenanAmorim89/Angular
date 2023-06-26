@@ -1,0 +1,35 @@
+<section class="two-way-binding">
+  <article>
+    <h3>Twu-way data binding</h3>
+    <div>
+
+
+      <input type="text" [value]="nome" (input)="nome = evento.value" #evento>
+
+      <!-- //*ngModel é a junção de property binding e event binding -->
+      <!-- //* ngModelChange é o evento que é disparado quando o valor do input é alterado -->
+
+      <!-- <input type="text"
+      [(ngModel)]="nome" //binding de propriedade
+      (ngModelChange)="nome = $event"/> binding de evento -->
+
+      <!-- //*nao precisamos do target.value pq o ngModelChange já nos retorna o valor do input -->
+
+      <!--two-way data binding -->
+      <input type="text" [(ngModel])="nome">
+
+      <div>
+        <p>Meu nome é {{ pessoa.nome }} e tenho {{ pessoa.idade }} anos de idade</p>
+
+        <input type="text" [(ngModel)]=" pessoa.nome">
+        <input type="text" [(ngModel)]=" pessoa.idade">
+      </div>
+
+
+      <p>Você digitou: {{ nome }}</p>
+
+    </div>
+  </article>
+
+  
+</section>

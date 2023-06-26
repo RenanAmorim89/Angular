@@ -40,6 +40,8 @@ export class DataBindingComponent {
 
   }
 
+  
+
   getCurtirCurso() {
     return true;
   }
